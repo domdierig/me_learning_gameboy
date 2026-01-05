@@ -11,6 +11,7 @@ check-folder-%:
 
 build-%: check-folder-%
 	$(eval FOLDER := $*)
+	mkdir -p bin
 	rgbasm -Werror -Weverything -o bin/$(FOLDER).o $(FOLDER)/main.asm
 	rgblink --dmg --tiny -o bin/$(FOLDER).gb bin/$(FOLDER).o
 	rgbfix --title $(FOLDER) --pad-value 0 --validate bin/$(FOLDER).gb
