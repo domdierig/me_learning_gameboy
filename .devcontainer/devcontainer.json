@@ -1,0 +1,17 @@
+{
+	"name": "me_learning_gameboy",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/me_learning_gameboy,type=bind",
+	"workspaceFolder": "/workspace/me_learning_gameboy",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"donaldhays.rgbds-z80",
+				"GitHub.copilot-chat",
+				"GitHub.copilot"
+			]
+		}
+	}	
+}
