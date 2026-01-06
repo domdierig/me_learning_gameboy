@@ -1,0 +1,13 @@
+include "hardware.inc"
+
+section "header", rom0[$0100]
+	di
+	jp main
+	ds ($0150 - @), 0
+
+section "main", rom0
+main:
+	call InitSample
+	.loop
+		call UpdateSample
+		jr .loop
